@@ -1,0 +1,26 @@
+// Variables
+$text-main: #333333
+$decor-main: #ffd200
+
+//fonts
+@font-face
+    font-family: "MuseoSansCyrl"
+    src: url("../../fonts/MuseoSans/MuseoSansCyrl-500.ttf") format("ttf"),
+    url("../../fonts/MuseoSans/MuseoSansCyrl-500.woff") format("woff")
+    font-style: normal
+    font-weight: 500
+
+@font-face
+    font-family: "MuseoSansCyrl"
+    src: url("../../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("ttf"),
+    url("../../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff")
+    font-style: normal
+    font-weight: 700
+
+
+//adaptiv font mixin
+$maxWidth: 1920 //все полотно, а не только контейнер
+=adaptiv-font($pcSize, $mobSize) 
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))

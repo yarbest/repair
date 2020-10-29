@@ -1,0 +1,43 @@
+@import common
+
+
+
+body
+    font-family: "MuseoSansCyrl"
+
+.container
+    max-width: 1170px
+    margin: 0 auto
+
+.header
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        img
+
+    &__info // вся правая часть в шапке
+        display: flex
+        align-items: center
+        color: $text-main
+    &__contacts //контейнер для адреса и телефона
+        display: flex
+        flex-direction: column
+        margin-right: 30px
+    &__address
+        margin-bottom: 9px
+        +adaptiv-font(13, 20)
+        text-align: right
+    &__phone
+        +adaptiv-font(20, 28)
+        font-weight: 700
+        color: inherit
+
+    &__button
+        padding: 18px 30px
+        font-weight: 700
+        +adaptiv-font(13, 20)
+        color: inherit
+        border-radius: 10px
+        background-color: $decor-main
