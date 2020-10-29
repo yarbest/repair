@@ -1,0 +1,68 @@
+.header
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 7px 0
+    &__logo
+        img
+            max-width: 100%
+
+    &__info // вся правая часть в шапке
+        display: flex
+        align-items: center
+        color: $text-main
+    &__contacts //контейнер для адреса и телефона
+        display: flex
+        flex-direction: column
+        margin-right: 30px
+    &__address
+        margin-bottom: 9px
+        font-size: 13px
+        // +adaptiv-font(13, 20)
+        text-align: right
+    &__phone
+        font-size: 20px
+        // +adaptiv-font(20, 28)
+        font-weight: 700
+        color: inherit
+
+    &__button
+        padding: 18px 30px
+        font-weight: 700
+        font-size: 13px
+        // +adaptiv-font(13, 20)
+        color: inherit
+        border-radius: 10px
+        background-color: $decor-main
+
+
+
+@media (max-width: 567px)
+    .header
+        &__contacts
+            display: none
+
+
+@media (max-width: 480px)
+    .header
+        &__body
+            padding: 17px 0
+        &__logo
+            width: 91px
+            height: 44px
+            img
+
+
+        &__button
+            padding: 15px 25px
+            font-size: 16px
+
+@media (max-width: 360px)
+
+    .header
+        &__body
+        &__logo
+        &__contacts
+        &__button
+            font-size: 10px

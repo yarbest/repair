@@ -1,24 +1,22 @@
 @font-face {
   font-family: "MuseoSansCyrl";
-  src: url("../../fonts/MuseoSans/MuseoSansCyrl-500.ttf") format("ttf"), url("../../fonts/MuseoSans/MuseoSansCyrl-500.woff") format("woff");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-500.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-500.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: "MuseoSansCyrl";
-  src: url("../../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("ttf"), url("../../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 
-body {
-  font-family: "MuseoSansCyrl";
-}
-
-.container {
-  max-width: 1170px;
-  margin: 0 auto;
+@media (max-width: 1199px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .header__body {
@@ -31,6 +29,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 7px 0;
+}
+
+.header__logo img {
+  max-width: 100%;
 }
 
 .header__info {
@@ -56,12 +59,12 @@ body {
 
 .header__address {
   margin-bottom: 9px;
-  font-size: calc(20px + -7 * ((100vw - 320px) / 1600));
+  font-size: 13px;
   text-align: right;
 }
 
 .header__phone {
-  font-size: calc(28px + -8 * ((100vw - 320px) / 1600));
+  font-size: 20px;
   font-weight: 700;
   color: inherit;
 }
@@ -69,8 +72,270 @@ body {
 .header__button {
   padding: 18px 30px;
   font-weight: 700;
-  font-size: calc(20px + -7 * ((100vw - 320px) / 1600));
+  font-size: 13px;
   color: inherit;
   border-radius: 10px;
   background-color: #ffd200;
+}
+
+@media (max-width: 567px) {
+  .header__contacts {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__body {
+    padding: 17px 0;
+  }
+  .header__logo {
+    width: 91px;
+    height: 44px;
+  }
+  .header__button {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__button {
+    font-size: 10px;
+  }
+}
+
+.hero {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.hero__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0;
+}
+
+.hero__text {
+  -ms-flex-preferred-size: 41%;
+      flex-basis: 41%;
+}
+
+.hero__title {
+  padding-top: 34px;
+  margin-bottom: 38px;
+  margin-left: -5px;
+}
+
+.hero__title h1 {
+  font-size: 41px;
+  line-height: 55px;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  margin-bottom: 74px;
+}
+
+.hero__subtitle span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero__details {
+  max-width: 304px;
+}
+
+.hero__image {
+  -ms-flex-preferred-size: 48.7%;
+      flex-basis: 48.7%;
+}
+
+.hero__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hero-details__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-details__item:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.hero-details__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+  padding: 7px;
+  border: 2px solid #ffd200;
+  border-radius: 50%;
+}
+
+.hero-details__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-details__text span {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (max-width: 1199px) {
+  .hero__body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__title {
+    padding: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+  .hero__title h1 {
+    font-size: 34px;
+    line-height: normal;
+  }
+  .hero__subtitle {
+    margin-bottom: 30px;
+  }
+  .hero__image {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .hero-details__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .hero-details__image {
+    margin-right: 15px;
+  }
+  .hero-details__text span {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero__text {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .hero__image {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .hero__title {
+    margin-bottom: 15px;
+  }
+  .hero__title h1 {
+    font-size: 28px;
+  }
+  .hero__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .hero__text {
+    margin-bottom: 25px;
+  }
+  .hero__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__image img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__text {
+    margin-bottom: 35px;
+  }
+  .hero__image img {
+    width: auto;
+  }
+  .hero__body {
+    padding: 45px 0;
+  }
+  .hero__title {
+    padding: 0;
+    margin-bottom: 13px;
+    margin-left: 0;
+  }
+  .hero__title h1 {
+    font-size: 28px;
+  }
+  .hero__subtitle {
+    margin-bottom: 30px;
+  }
+  .hero__subtitle span {
+    font-size: 20px;
+  }
+  .hero-details__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .hero-details__image {
+    margin-right: 15px;
+  }
+  .hero-details__text span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__title h1 {
+    font-size: 24px;
+  }
+  .hero__subtitle {
+    margin-bottom: 30px;
+  }
+  .hero__subtitle span {
+    font-size: 18px;
+  }
+  .hero-details__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .hero-details__image {
+    margin-right: 15px;
+  }
+  .hero-details__text span {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: "MuseoSansCyrl";
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
 }
