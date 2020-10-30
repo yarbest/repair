@@ -159,10 +159,6 @@
   max-height: 100%;
 }
 
-.hero__image-hidden {
-  display: none;
-}
-
 .hero-details__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,10 +377,6 @@
 
 .callback__image img {
   max-width: 100%;
-}
-
-.callback__image_hidden {
-  display: none;
 }
 
 .callback-form {
