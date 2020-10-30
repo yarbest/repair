@@ -1,0 +1,310 @@
+
+.callback
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 85px 0
+    &__text
+        flex-basis: 42.7%
+    &__title
+        margin-bottom: 25px
+        max-width: 345px
+        h2
+            font-size: 24px
+            line-height: 1.3em
+            font-weight: 700
+    &__subtitle
+        margin-bottom: 30px
+        max-width: 237px
+        p
+            font-size: 16px
+            line-height: normal
+    &__form
+    &__footer
+    &__image
+        flex-basis: 48.7%
+        img
+            max-width: 100%
+.callback-form
+    display: flex
+    flex-wrap: wrap
+    &__inputs
+        display: flex
+        justify-content: space-between
+        flex-grow: 1
+        align-items: center
+        flex-wrap: wrap
+        input
+    &__name
+        flex-basis: 48%
+        padding: 25px
+        border-radius: 10px
+        border: 1px solid #dddddd
+    &__phone
+        flex-basis: 48%
+        padding: 25px
+        border-radius: 10px
+        border: 1px solid #dddddd
+    &__submit
+        margin-top: 30px
+        margin-bottom: 30px
+        padding: 25px 100px
+        flex-grow: 1  
+        border-radius: 10px
+        background-color: $decor-main
+        font-size: 16px
+        font-weight: 700   
+
+.callback-footer
+    display: flex
+    justify-content: space-between
+    font-size: 15px
+
+    &__item-1
+        flex-basis: 44.8%
+        line-height: 1.3em
+    &__item-2
+    &__phone
+        color: $text-main
+        text-decoration: none
+        font-weight: 700
+
+@media ( max-width: 1199px )
+    .callback
+        &__body
+            padding: 85px 0
+        &__text
+            flex-basis: 42.7%
+        &__title
+            margin-bottom: 25px
+            max-width: 345px
+            h2
+                font-size: 24px
+                line-height: 1.3em
+        &__subtitle
+            margin-bottom: 30px
+            max-width: 237px
+            p
+                font-size: 16px
+        &__form
+        &__footer
+        &__image
+            flex-basis: 45%
+            img
+    .callback-form
+        &__name
+            flex-basis: 48%
+            margin-right: auto
+            padding: 25px
+        &__phone
+            flex-basis: 48%
+            padding: 25px
+        &__submit
+            margin-top: 30px
+            margin-bottom: 30px
+            padding: 25px 55px
+            flex-grow: 1  
+            font-size: 16px
+
+    .callback-footer
+        font-size: 15px
+        &__item-1
+            flex-basis: 44.8%
+            line-height: 1.3em
+        &__item-2
+        &__phone
+
+@media ( max-width: 991px )
+    .callback
+        &__body
+            padding: 55px 0
+        &__text
+            flex-basis: 45%
+        &__title
+            margin-bottom: 20px
+            max-width: 100%
+            h2
+                font-size: 24px
+                line-height: 1.2em
+        &__subtitle
+            margin-bottom: 20px
+            max-width: 100%
+            p
+                font-size: 16px
+        &__form
+        &__footer
+        &__image
+            flex-basis: 50%
+            img
+    .callback-form
+        &__name
+            flex-basis: 45%
+            flex-grow: 1
+            padding: 20px
+        &__phone
+            flex-basis: 45%
+            flex-grow: 1
+            padding: 20px
+        &__submit
+            margin-top: 20px
+            margin-bottom: 20px
+            padding: 20px 15px
+            flex-grow: 1  
+            font-size: 16px
+
+    .callback-footer
+        font-size: 15px
+        &__item-1
+            flex-basis: 45%
+            line-height: 1.2em
+        &__item-2
+            flex-basis: 45%
+        &__phone
+
+@media ( max-width: 767px )
+    .callback
+        &__body
+            padding: 50px 0
+            flex-direction: column
+        &__text
+            flex-basis: 45%
+            margin-bottom: 30px
+        &__title
+            margin-bottom: 20px
+            max-width: 100%
+            h2
+                font-size: 24px
+                line-height: 1.2em
+        &__subtitle
+            margin-bottom: 20px
+            max-width: 100%
+            p
+                font-size: 16px
+        &__form
+        &__footer
+        &__image 
+            display: flex
+            justify-content: center
+            img
+                width: 70%
+
+    .callback-form
+        &__name
+            flex-basis: 48%
+            flex-grow: 0
+            padding: 20px
+        &__phone
+            flex-basis: 48%
+            flex-grow: 0
+            padding: 20px
+        &__submit
+            margin-top: 20px
+            margin-bottom: 20px
+            padding: 20px 15px
+            flex-grow: 1  
+            width: 100%
+            font-size: 16px
+
+    .callback-footer
+        font-size: 15px
+        &__item-1
+            flex-basis: 45%
+            line-height: 1.2em
+        &__item-2
+            flex-basis: 45%
+            text-align: right
+        &__phone
+
+@media ( max-width: 480px )
+    .callback
+        &__body
+            padding: 45px 0
+            flex-direction: column
+        &__text
+            flex-basis: 45%
+            margin-bottom: 30px
+        &__title
+            margin-bottom: 20px
+            max-width: 100%
+            h2
+                font-size: 20px
+                line-height: 1.2em
+        &__subtitle
+            margin-bottom: 20px
+            max-width: 100%
+            p
+                font-size: 16px
+        &__form
+        &__footer
+        &__image 
+            img
+                width: auto
+
+    .callback-form
+        &__name
+            flex-basis: 48%
+            flex-grow: 1
+            padding: 20px
+        &__phone
+            flex-basis: 48%
+            flex-grow: 1
+            padding: 20px
+        &__submit
+            margin-top: 20px
+            margin-bottom: 20px
+            padding: 20px 10px
+            flex-grow: 1  
+            width: 100%
+            font-size: 16px
+
+    .callback-footer
+        font-size: 15px
+        &__item-1
+            flex-basis: 45%
+            line-height: 1.2em
+        &__item-2
+            flex-basis: 45%
+            text-align: right
+        &__phone
+
+@media ( max-width: 360px )
+    .callback
+        &__body
+        &__text
+            margin-bottom: 20px
+        &__title
+            margin-bottom: 20px
+            h2
+                font-size: 18px
+        &__subtitle
+            margin-bottom: 20px
+            max-width: 100%
+            p
+                font-size: 14px
+        &__form
+        &__footer
+            flex-direction: column
+        &__image 
+            img
+
+    .callback-form
+        &__name
+            flex-basis: 48%
+            flex-grow: 1
+            padding: 20px
+        &__phone
+            flex-basis: 48%
+            flex-grow: 1
+            padding: 20px
+        &__submit
+            font-size: 14px
+
+    .callback-footer
+        &__item-1
+            margin-bottom: 10px
+        &__item-2
+            text-align: left
+        &__phone
+
+        
