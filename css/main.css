@@ -262,7 +262,7 @@
   .hero__text {
     margin-bottom: 25px;
   }
-  .hero__image {
+  .hero__image a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -606,7 +606,7 @@
   .callback__subtitle p {
     font-size: 16px;
   }
-  .callback__image {
+  .callback__image a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
