@@ -1,19 +1,95 @@
 .portfolio
-    border: 1px solid #000
+    background-color: $background-section
     &__body
-        padding: 100px 0
+        padding: 100px 0 190px
     &__title
         margin-bottom: 100px
-        border: 1px solid #000
         h2
             font-size: 30px
             font-weight: 700
             line-height: 1.3em
             text-align: center
     &__slider
-        border: 1px solid #000
+        margin: 0 auto
 
 .portfolio-slider
     &__item
-        background-color: red
-        // margin: 0 10px
+        display: flex !important
+        justify-content: center
+        margin-right: 10px
+        img 
+            max-width: 100%
+
+@media ( max-width: 1199px )
+    
+    .portfolio
+        &__body
+            padding: 90px 0 170px
+        &__title
+            margin-bottom: 80px
+            h2
+                font-size: 30px
+        &__slider
+
+    .portfolio-slider
+        &__item
+            margin-right: 20px
+            img 
+
+@media ( max-width: 991px )
+    
+    .portfolio
+        &__body
+            padding: 70px 0 120px
+        &__title
+            margin-bottom: 60px
+            h2
+                font-size: 24px
+        &__slider
+            max-width: 80%
+
+    .portfolio-slider
+        &__item
+            margin-right: 20px
+            img 
+
+@media ( max-width: 767px )
+    
+    .portfolio
+        &__body
+            padding: 50px 0 90px
+        &__title
+            margin-bottom: 50px
+            h2
+                font-size: 22px
+        &__slider
+            max-width: 70%
+
+    .portfolio-slider
+        &__item
+            margin: 0
+            img 
+
+@media ( max-width: 480px )
+    
+    .portfolio
+        &__body
+            padding: 30px 0 90px
+        &__title
+            margin-bottom: 30px
+            h2
+                font-size: 20px
+        &__slider
+            max-width: 100%
+
+    .portfolio-slider
+        &__item
+            margin: 0
+            img 
+
+@media ( max-width: 360px )
+
+    .portfolio-slider
+        &__item
+            margin: 0 10px
+            img 
