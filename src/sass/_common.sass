@@ -27,8 +27,3 @@ $maxWidth: 1366 //все полотно, а не только контейнер
     $addSize: $pcSize - $mobSize
     $maxWidth: $maxWidth - 320
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
-
-@media (max-width: 1199px)
-    .container
-        width: 100%
-        padding: 0 20px
