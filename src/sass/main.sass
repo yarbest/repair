@@ -2,13 +2,19 @@
 @import blocks/header
 @import blocks/hero
 @import blocks/callback
+@import blocks/portfolio
 
 
 
 
 body
+    display: flex
+    flex-direction: column
     font-family: "MuseoSansCyrl"
     color: $text-main
+
+.main
+    flex-grow: 1 //прижимаем футер к низу
 
 .container
     max-width: 1170px
