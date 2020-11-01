@@ -71,6 +71,10 @@
   background-color: #ffd200;
 }
 
+.header__button:focus, .header__button:active, .header__button:hover {
+  background-color: #f0c500;
+}
+
 @media (max-width: 567px) {
   .header__contacts {
     display: none;
@@ -409,12 +413,20 @@
   border: 1px solid #dddddd;
 }
 
+.callback-form__name:focus {
+  border-color: #ffd200;
+}
+
 .callback-form__phone {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   padding: 25px;
   border-radius: 10px;
   border: 1px solid #dddddd;
+}
+
+.callback-form__phone:focus {
+  border-color: #ffd200;
 }
 
 .callback-form__submit {
@@ -428,6 +440,10 @@
   background-color: #ffd200;
   font-size: 16px;
   font-weight: 700;
+}
+
+.callback-form__submit:focus, .callback-form__submit:active, .callback-form__submit:hover {
+  background-color: #f0c500;
 }
 
 .callback-footer {

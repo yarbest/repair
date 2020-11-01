@@ -42,11 +42,15 @@
         padding: 25px
         border-radius: 10px
         border: 1px solid #dddddd
+        &:focus
+            border-color: $decor-main 
     &__phone
         flex-basis: 48%
         padding: 25px
         border-radius: 10px
         border: 1px solid #dddddd
+        &:focus
+            border-color: $decor-main 
     &__submit
         margin-top: 30px
         margin-bottom: 30px
@@ -56,6 +60,8 @@
         background-color: $decor-main
         font-size: 16px
         font-weight: 700   
+        &:focus, &:active, &:hover
+            background-color: darken($decor-main, 3%) 
 
 .callback-footer
     display: flex
