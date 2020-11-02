@@ -98,10 +98,21 @@
     background-size: 100%;
     background-position: 0px -10px;
 }
+
 .slick-next.slick-disabled {
     background: url("../../img/portfolio__slider/right-arrow_disabled.svg");
     background-size: 100%;
     background-position: 0px -10px;
+}
+
+.slick-prev,
+.slick-next {
+    transition: 0.5s;
+}
+
+.slick-prev:not(.slick-disabled):hover,
+.slick-next:not(.slick-disabled):hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 991px) {

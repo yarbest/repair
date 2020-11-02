@@ -27,3 +27,24 @@ $maxWidth: 1366 //все полотно, а не только контейнер
     $addSize: $pcSize - $mobSize
     $maxWidth: $maxWidth - 320
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+// button to top
+.btn-scroll
+    display: none
+    position: fixed
+    right: 30px
+    bottom: 30px
+    background-color: transparent
+    fill: $decor-main
+    border-radius: 50%
+    &_active
+        display: block
+    &:hover
+        fill: lighten($decor-main, 20%)
+        
+
+
+    &__image
+        display: block
+        width: 60px
+        height: 60px

@@ -15,6 +15,7 @@ buttonCallMe.addEventListener("click", openModal);
 buttonCloseModal.addEventListener("click", closeModal);
 
 $(document).ready(function () {
+    //slider
     $(".portfolio__slider").slick({
         infinite: false,
         dots: true,
@@ -41,5 +42,21 @@ $(document).ready(function () {
                 },
             },
         ],
+    });
+
+    //button to top
+    let btn = $(".btn-scroll");
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass("btn-scroll_active");
+        } else {
+            btn.removeClass("btn-scroll_active");
+        }
+    });
+
+    btn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "300");
     });
 });

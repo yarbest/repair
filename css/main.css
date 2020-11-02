@@ -12,6 +12,30 @@
   font-weight: 700;
 }
 
+.btn-scroll {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: transparent;
+  fill: #ffd200;
+  border-radius: 50%;
+}
+
+.btn-scroll_active {
+  display: block;
+}
+
+.btn-scroll:hover {
+  fill: #ffe466;
+}
+
+.btn-scroll__image {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
 .header__body {
   display: -webkit-box;
   display: -ms-flexbox;
