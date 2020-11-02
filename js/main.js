@@ -46,8 +46,9 @@ $(document).ready(function () {
 
     //button to top
     let btn = $(".btn-scroll");
-
+    //function, which shows the button
     $(window).scroll(function () {
+        //if the distance from the top is more than 300px, the button shows
         if ($(window).scrollTop() > 300) {
             btn.addClass("btn-scroll_active");
         } else {
@@ -56,7 +57,7 @@ $(document).ready(function () {
     });
 
     btn.on("click", function (e) {
-        e.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "300");
+        //при нажатии на кнопку, анимацией прокручивается до верха за 1 секундy
+        $("html, body").animate({ scrollTop: 0 }, { duration: 2000 });
     });
 });
