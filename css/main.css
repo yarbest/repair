@@ -581,8 +581,11 @@
 }
 
 @media (max-width: 991px) {
+  .callback::before {
+    display: none;
+  }
   .callback::after {
-    width: 100%;
+    width: 103%;
     background-size: cover;
   }
   .callback__body {
