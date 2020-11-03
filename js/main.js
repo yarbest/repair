@@ -58,6 +58,6 @@ $(document).ready(function () {
 
     btn.on("click", function (e) {
         //при нажатии на кнопку, анимацией прокручивается до верха за 1 секундy
-        $("html, body").animate({ scrollTop: 0 }, { duration: 2000 });
+        $("html, body").animate({ scrollTop: 0 }, { duration: 1000 });
     });
 });
