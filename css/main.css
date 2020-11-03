@@ -916,19 +916,19 @@
 }
 
 .slider-arrows__prev {
-  background: url("../../img/portfolio__slider/left-arrow.svg") no-repeat;
+  background: url("../img/icons.svg#left-arrow") no-repeat;
 }
 
 .slider-arrows__prev.slick-disabled {
-  background: url("../../img/portfolio__slider/left-arrow_disabled.svg");
+  background: url("../img/icons.svg#left-arrow_disabled");
 }
 
 .slider-arrows__next {
-  background: url("../../img/portfolio__slider/right-arrow.svg") no-repeat;
+  background: url("../img/icons.svg#right-arrow") no-repeat;
 }
 
 .slider-arrows__next.slick-disabled {
-  background: url("../../img/portfolio__slider/right-arrow_disabled.svg");
+  background: url("../img/icons.svg#right-arrow_disabled");
 }
 
 @media (max-width: 1199px) {
