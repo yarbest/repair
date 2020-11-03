@@ -387,7 +387,7 @@
   z-index: -1;
   background-image: url("../img/callback_bg.jpg");
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left 15px center;
 }
 
 .callback__body {
@@ -529,7 +529,7 @@
 
 @media (max-width: 1199px) {
   .callback__body {
-    padding: 85px 0;
+    padding: 65px 0;
   }
   .callback__text {
     -ms-flex-preferred-size: 42.7%;
