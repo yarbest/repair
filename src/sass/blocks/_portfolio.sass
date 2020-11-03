@@ -11,6 +11,10 @@
             text-align: center
     &__slider
         margin: 0 auto
+    &__slider-arrows
+        margin: 0 auto
+        margin-top: 70px
+        max-width: 120px
 
 .portfolio-slider
     &__item
@@ -20,6 +24,35 @@
         img 
             max-width: 100%
             max-height: 100%
+
+//slider's arrows
+.slider-arrows
+    display: flex 
+    justify-content: space-between
+    &__arrow
+        width: 45px
+        height: 25px
+        cursor: pointer
+        transition: 0.5s
+        &:not(.slick-disabled):hover
+            transform: scale(1.1)
+        &.slick-arrow
+            background-size: 100%
+            background-position: 0px -10px
+        &.slick-disabled
+            background-size: 100% !important
+            background-position: 0px -10px !important 
+            cursor: default     
+    &__prev
+        background: url("../../img/portfolio__slider/left-arrow.svg") no-repeat
+        &.slick-disabled
+            background: url("../../img/portfolio__slider/left-arrow_disabled.svg")
+    &__next
+        background: url("../../img/portfolio__slider/right-arrow.svg") no-repeat
+        &.slick-disabled
+            background: url("../../img/portfolio__slider/right-arrow_disabled.svg")
+
+
 
 @media ( max-width: 1199px )
     
@@ -38,7 +71,6 @@
             img 
 
 @media ( max-width: 991px )
-    
     .portfolio
         &__body
             padding: 70px 0 120px
@@ -53,6 +85,9 @@
         &__item
             margin-right: 20px
             img 
+
+    .slider-arrows
+        margin-top: 50px
 
 @media ( max-width: 767px )
     

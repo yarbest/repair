@@ -17,25 +17,27 @@ buttonCloseModal.addEventListener("click", closeModal);
 $(document).ready(function () {
     //slider
     $(".portfolio__slider").slick({
+        prevArrow: $(".slider-arrows__prev"), //назначаем кастомные стрелки на роль переключателей слайдера
+        nextArrow: $(".slider-arrows__next"),
         infinite: false,
         dots: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 481,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
