@@ -50,9 +50,11 @@ $(document).ready(function () {
     $(window).scroll(function () {
         //if the distance from the top is more than 300px, the button shows
         if ($(window).scrollTop() > 300) {
-            btn.addClass("btn-scroll_active");
+            // btn.addClass("btn-scroll_active");
+            btn.show({ duration: 1000 });
         } else {
-            btn.removeClass("btn-scroll_active");
+            // btn.removeClass("btn-scroll_active");
+            btn.hide({ duration: 1000 });
         }
     });
 
