@@ -102,6 +102,10 @@
 
 @media ( max-width: 1199px )
     .callback
+        &::after
+            background-size: cover
+            background-position: right -150px center
+            background-attachment: fixed
         &__body
             padding: 65px 0
         &__text
@@ -151,7 +155,9 @@
             display: none
         &::after
             width: 103%
+            background-position: center center
             background-size: cover
+            background-attachment: fixed
         &__body
             padding: 55px 0
         &__text
