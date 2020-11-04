@@ -13,9 +13,9 @@ const closeModal = () => {
 
 buttonCallMe.addEventListener("click", openModal);
 buttonCloseModal.addEventListener("click", closeModal);
-
+//jquery
 $(document).ready(function () {
-    //slider
+    //slider------------------------------------------------------------------
     $(".portfolio__slider").slick({
         prevArrow: $(".slider-arrows__prev"), //назначаем кастомные стрелки на роль переключателей слайдера
         nextArrow: $(".slider-arrows__next"),
@@ -45,8 +45,9 @@ $(document).ready(function () {
             },
         ],
     });
+    //slider------------------------------------------------------------------
 
-    //button to top
+    //button to top-----------------------------------------------------------
     let btn = $(".btn-scroll");
     //function, which shows the button
     $(window).scroll(function () {
@@ -64,4 +65,22 @@ $(document).ready(function () {
         //при нажатии на кнопку, анимацией прокручивается до верха за 1 секундy
         $("html, body").animate({ scrollTop: 0 }, { duration: 1000 });
     });
+    //button to top-----------------------------------------------------------
+
+    //wow------------------------------------------------------------------
+    var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animated", // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+    });
+    wow.init();
+    //wow------------------------------------------------------------------
 });

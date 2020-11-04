@@ -4,6 +4,10 @@
         padding: 100px 0 190px
     &__title
         margin-bottom: 100px
+        
+        animation-name: fadeInUp
+        animation-iteration-count: 1
+        animation-duration: 1s
         h2
             font-size: 30px
             font-weight: 700
@@ -20,10 +24,20 @@
     &__item
         display: flex !important
         justify-content: center
-        margin-right: 10px
+        margin-right: 10px    
+        animation-name: pulse
+        animation-iteration-count: 1
+        animation-duration: 1s 
+        &:nth-child(1)
+            animation-delay: 0.3s
+        &:nth-child(2)
+            animation-delay: 0.6s
+        &:nth-child(3)
+            animation-delay: 0.9s 
         img 
             max-width: 100%
             max-height: 100%
+
 
 //slider's arrows
 .slider-arrows

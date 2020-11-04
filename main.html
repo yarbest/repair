@@ -7,7 +7,7 @@
 
         <link rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css" />
-
+        <link rel="stylesheet" href="libs/animate/animate.min.css" />
         <link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/main.css" />
@@ -149,7 +149,7 @@
             <section class="portfolio">
                 <div class="container">
                     <div class="portfolio__body">
-                        <div class="portfolio__title">
+                        <div class="portfolio__title wow" data-wow-offset="100">
                             <h2>
                                 Работая с 2007 года,<br />
                                 мы сделали более 500 ремонтов в квартирах и домах
@@ -157,13 +157,28 @@
                         </div>
                         <!-- /.portfolio__title -->
                         <div class="portfolio__slider portfolio-slider">
-                            <a data-fancybox="portfolio" href="img/portfolio__slider/portfolio1_big.webp" class="portfolio-slider__item">
+                            <a
+                                data-fancybox="portfolio"
+                                href="img/portfolio__slider/portfolio1_big.webp"
+                                class="portfolio-slider__item wow"
+                                data-wow-offset="100"
+                            >
                                 <img src="img/portfolio__slider/portfolio1.webp" alt="portfolio1" />
                             </a>
-                            <a data-fancybox="portfolio" href="img/portfolio__slider/portfolio2.webp" class="portfolio-slider__item">
+                            <a
+                                data-fancybox="portfolio"
+                                href="img/portfolio__slider/portfolio2.webp"
+                                class="portfolio-slider__item wow"
+                                data-wow-offset="100"
+                            >
                                 <img src="img/portfolio__slider/portfolio2.webp" alt="portfolio2" />
                             </a>
-                            <a data-fancybox="portfolio" href="img/portfolio__slider/portfolio3.webp" class="portfolio-slider__item">
+                            <a
+                                data-fancybox="portfolio"
+                                href="img/portfolio__slider/portfolio3.webp"
+                                class="portfolio-slider__item wow"
+                                data-wow-offset="100"
+                            >
                                 <img src="img/portfolio__slider/portfolio3.webp" alt="portfolio3" />
                             </a>
                             <a data-fancybox="portfolio" href="img/portfolio__slider/portfolio1.webp" class="portfolio-slider__item">
@@ -209,6 +224,10 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+        <script src="libs/wow/wow.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            new WOW().init();
+        </script>
     </body>
 </html>
