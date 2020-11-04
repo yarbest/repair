@@ -1050,6 +1050,8 @@
     max-width: 90%;
   }
   .portfolio-slider__item {
+    -webkit-animation: none;
+            animation: none;
     margin: 0 10px;
   }
 }
