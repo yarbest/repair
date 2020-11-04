@@ -96,12 +96,12 @@
   color: inherit;
   border-radius: 10px;
   background-color: #ffd200;
-  -webkit-animation-name: lightSpeedInRight;
-          animation-name: lightSpeedInRight;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .header__button:focus, .header__button:active, .header__button:hover {
@@ -697,16 +697,20 @@
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 20px;
-    -webkit-animation-name: fadeInLeft;
-            animation-name: fadeInLeft;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
   }
   .callback-form__phone {
-    -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 20px;
@@ -720,6 +724,12 @@
             flex-grow: 1;
     width: 100%;
     font-size: 16px;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
   }
   .callback-footer {
     font-size: 15px;
