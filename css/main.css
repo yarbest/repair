@@ -864,8 +864,8 @@
 
 .portfolio__title {
   margin-bottom: 100px;
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-duration: 1s;
@@ -897,12 +897,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 10px;
-  -webkit-animation-name: pulse;
-          animation-name: pulse;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
 }
 
 .portfolio-slider__item:nth-child(1) {
@@ -1050,8 +1048,6 @@
     max-width: 90%;
   }
   .portfolio-slider__item {
-    -webkit-animation: none;
-            animation: none;
     margin: 0 10px;
   }
 }
