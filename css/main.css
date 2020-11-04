@@ -870,6 +870,8 @@
           animation-iteration-count: 1;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .portfolio__title h2 {

@@ -149,7 +149,7 @@
             <section class="portfolio">
                 <div class="container">
                     <div class="portfolio__body">
-                        <div class="portfolio__title wow" data-wow-offset="100">
+                        <div class="portfolio__title wow animate__animated">
                             <h2>
                                 Работая с 2007 года,<br />
                                 мы сделали более 500 ремонтов в квартирах и домах
@@ -157,8 +157,10 @@
                         </div>
                         <!-- /.portfolio__title -->
                         <div class="portfolio__slider portfolio-slider">
-                            <!-- НАДО ОБЯЗАТЕЛЬНО ПРОПИСЫВАТЬ ОБА ЗНАЧЕНИЯ КЛАССОВ ИНАЧЕ КАРТИНКИ ЛАГАЮТ -->
-                            <!-- wow И animate__animated -->
+                            <!-- НАДО ОБЯЗАТЕЛЬНО ПРОПИСЫВАТЬ ОБА ЗНАЧЕНИЯ КЛАССОВ wow И animate__animated
+                            ИНАЧЕ ЕЛЕМЕНТЫ ЛАГАЮТ При использовании animation-delay, но если его заменить на --animate-delay
+                            то тогда все ОК, и не нужно использовать класс animate__animated, но лучше перестраховаться,
+                            чтобы можно было использовать встроенные свойства, а не использовать с --приставками -->
                             <a
                                 data-fancybox="portfolio"
                                 href="img/portfolio__slider/portfolio1_big.webp"
