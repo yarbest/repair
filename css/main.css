@@ -1160,6 +1160,10 @@
           transform: translateY(0);
 }
 
+.price-card__image a {
+  pointer-events: none;
+}
+
 .price-card__image img {
   max-width: 100%;
   max-height: 100%;
@@ -1227,6 +1231,9 @@
   }
   .price-card__image::before {
     display: none;
+  }
+  .price-card__image a {
+    pointer-events: all;
   }
   .price-card__text {
     padding: 30px 0;

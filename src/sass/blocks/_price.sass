@@ -31,6 +31,7 @@
     &__image
         position: relative
         overflow: hidden
+        
         &::before
             content: ''
             top: 0
@@ -44,11 +45,11 @@
             pointer-events: none
             // background-image: url('../img/price/card_overlay.png')
             background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 90%)
-
         &:hover
             &::before
                 transform: translateY(0)
-
+        a
+            pointer-events: none
         img
             max-width: 100%
             max-height: 100%
@@ -106,6 +107,8 @@
         &__image
             &::before
                 display: none
+            a
+                pointer-events: all
         &__text
             padding: 30px 0
         &__title
