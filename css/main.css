@@ -699,16 +699,16 @@
     padding: 20px;
     -webkit-animation-name: zoomIn;
             animation-name: zoomIn;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
     -webkit-animation-delay: 0.2s;
             animation-delay: 0.2s;
   }
   .callback-form__phone {
     -webkit-animation-name: zoomIn;
             animation-name: zoomIn;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
     -ms-flex-preferred-size: 100%;
@@ -726,8 +726,8 @@
     font-size: 16px;
     -webkit-animation-name: zoomIn;
             animation-name: zoomIn;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
     -webkit-animation-delay: 0.6s;
             animation-delay: 0.6s;
   }
@@ -800,7 +800,7 @@
   .callback-form__submit {
     margin-top: 0;
     margin-bottom: 20px;
-    padding: 20px 10px;
+    padding: 20px 30px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1331,6 +1331,10 @@
   .price__subtitle {
     margin-bottom: 30px;
     font-size: 20px;
+  }
+  .price-card {
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
   }
   .price-card__text {
     padding: 30px 0;
