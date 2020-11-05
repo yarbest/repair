@@ -1205,6 +1205,16 @@
 
 .price-card__text {
   padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .price-card__title {
@@ -1215,8 +1225,6 @@
 
 .price-card__subtitle {
   display: block;
-  max-width: 98px;
-  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   color: inherit;
@@ -1277,7 +1285,6 @@
     font-size: 18px;
   }
   .price-card__subtitle {
-    max-width: 98px;
     font-size: 16px;
   }
 }
@@ -1308,7 +1315,6 @@
     font-size: 18px;
   }
   .price-card__subtitle {
-    max-width: 98px;
     font-size: 16px;
   }
 }
