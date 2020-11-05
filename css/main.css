@@ -1117,8 +1117,8 @@
 }
 
 .price-card {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   border: 1px solid #e8e8e8;
