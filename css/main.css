@@ -1120,6 +1120,10 @@
   line-height: 45px;
   font-weight: 700;
   text-align: center;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .price__subtitle {
@@ -1400,6 +1404,10 @@
   font-weight: 700;
   line-height: 45px;
   text-align: center;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .steps__subtitle {
