@@ -1429,8 +1429,8 @@
 .steps-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (14.6%)[5];
-      grid-template-columns: repeat(5, 14.6%);
+  -ms-grid-columns: 14.6% 14.6% 14.6% 14.6% 14.6%;
+      grid-template-columns: 14.6% 14.6% 14.6% 14.6% 14.6%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1533,8 +1533,8 @@
     font-size: 20px;
   }
   .steps-list {
-    -ms-grid-columns: (17%)[5];
-        grid-template-columns: repeat(5, 17%);
+    -ms-grid-columns: 17% 17% 17% 17% 17%;
+        grid-template-columns: 17% 17% 17% 17% 17%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
