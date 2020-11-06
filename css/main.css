@@ -1703,7 +1703,16 @@
     padding: 40px 0;
   }
   .materials__text p {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .materials__body {
+    padding: 40px 0;
+  }
+  .materials__text {
+    max-width: 250px;
   }
 }
 
