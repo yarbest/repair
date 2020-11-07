@@ -39,8 +39,7 @@ $maxWidth: 1366 //все полотно, а не только контейнер
     background-color: transparent
     fill: $decor-main
     border-radius: 50%
-    // &_active
-    //     display: block
+
     &:hover
         fill: darken($decor-main, 3%)
     &__image
@@ -48,7 +47,11 @@ $maxWidth: 1366 //все полотно, а не только контейнер
         width: 60px
         height: 60px
 
-// @media (max-width: 991px)
+@media (max-width: 991px)
+    .btn-scroll
+        &__image
+            width: 50px
+            height: 50px
 
 @media (max-width: 767px)
     .btn-scroll

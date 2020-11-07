@@ -93,10 +93,14 @@
                         </div>
                         <!-- /.hero__text -->
                         <div class="hero__image">
-                            <a data-fancybox="hero-gallery" href="img/hero-image.webp"
-                                ><img src="img/hero-image.webp" alt="hero-image"
-                            /></a>
-                            <a data-fancybox="hero-gallery" href="img/hero-image_2.webp"></a>
+                            <a data-fancybox="hero-gallery" href="img/hero-image.jpg">
+                                <picture>
+                                    <source srcset="img/hero-image.webp" type="image/webp" />
+                                    <img src="img/hero-image.jpg" alt="hero-image" />
+                                </picture>
+                                <!-- <img src="img/hero-image.webp" alt="hero-image" /> -->
+                            </a>
+                            <!-- <a data-fancybox="hero-gallery" href="img/hero-image_2.webp"></a> -->
                         </div>
                         <!-- hero__image -->
                     </div>
@@ -427,6 +431,7 @@
             </svg>
         </button>
         <!-- btn-scroll -->
+
         <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script> -->
         <script src="libs/jquery/jquery-3.5.1.min.js"></script>
         <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
