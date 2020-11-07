@@ -30,7 +30,7 @@
     align-items: center
     background-color: #f7f7f7
     border: 1px solid #e8e8e8
-    border-radius: 10%
+    border-radius: 5%
     transition: 0.5s ease
     animation-name: fadeInUp
     animation-duration: 1.1s
@@ -69,6 +69,10 @@
                 line-height: 1.3em
 
 @media ( max-width: 991px )
+    .materials
+        &__content
+            padding: 80px 0 60px
+    
     .materials-header
         &__body
             padding: 60px 0
@@ -77,22 +81,29 @@
                 font-size: 24px
 
     .materials-content
+
         &__body
             justify-content: center // было space-between 
 
     .material-item
         flex-basis: 40%
-        margin: 0 15px
-        margin-bottom: 30px
-
+        margin: 0 15px 30px
 
 @media ( max-width: 767px )
+    .materials
+        &__content
+            padding: 50px 0 40px
+    
     .materials-header
         &__body
             padding: 40px 0
         &__text
             p
                 font-size: 20px
+    
+    .material-item
+        flex-basis: 46%
+        margin: 0 10px 30px
 
 @media ( max-width: 575px )
     .materials-header
@@ -102,6 +113,11 @@
             p
                 font-size: 16px
 
+    .material-item
+        flex-basis: 70%
+        &__text
+            p
+                font-size: 14px
 @media ( max-width: 360px )
     .materials-header
         &__body
@@ -109,3 +125,7 @@
         &__text
             max-width: 250px
             p
+    .material-item
+        flex-basis: 100%
+        &__text
+            padding: 20px
