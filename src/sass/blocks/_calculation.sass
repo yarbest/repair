@@ -1,0 +1,184 @@
+.calculation
+    color: #000
+    position: relative
+    &::before
+        content: ''
+        height: 100%
+        width: 50%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-color: $decor-main-darker
+    &::after
+        content: ''
+        height: 100%
+        width: 50%
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        background-image: url('../img/calculation/calculation_bg.jpg')
+        background-size: contain
+        border: 1px solid #000
+    &__body
+        display: flex
+        justify-content: space-between
+        padding: 100px 0
+    &__survey
+        // border: 1px solid #000
+        max-width: 520px
+    &__application
+        // border: 1px solid #000
+        max-width: 370px
+
+.calculation-survey // левый блок с опросником
+    // flex-basis: 50%
+    &__title
+        margin-bottom: 45px
+        font-size: 22px
+        font-weight: 700
+        line-height: 33px
+    &__subtitle
+        margin-bottom: 95px
+        font-size: 16px
+    &__questions
+        max-width: 455px
+
+.survey-questions //контейнер для вопросов
+    &__item
+        margin-bottom: 27px
+    
+.survey-question //отдельный вопрос
+    display: flex
+    align-items: center
+    
+    &__number
+        display: flex
+        align-items: center
+        padding: 7px 9px 7px 11px
+        margin-right: 32px
+        font-weight: 700
+        border: 2px solid #000
+        border-radius: 50%
+    &__text 
+        font-weight: 700
+        font-size: 18px
+
+.calculation-application // правый блок с формой
+    &__title
+        margin-bottom: 45px
+        font-size: 22px
+        font-weight: 700
+        line-height: 33px
+        text-align: center
+    &__subtitle
+        margin-bottom: 50px
+        font-size: 16px
+        text-align: center
+    &__form
+        margin-bottom: 30px
+    &__footer
+
+.application-form
+    display: flex
+    flex-direction: column
+    &__name
+        padding: 22px
+        margin-bottom: 15px
+        border-radius: 10px
+        border: 1px solid #dddddd
+        font-size: 15px
+        line-height: 24px
+        &:focus
+            border-color: $decor-main 
+    &__phone
+        padding: 22px
+        margin-bottom: 30px
+        border-radius: 10px
+        border: 1px solid #dddddd
+        font-size: 15px
+        line-height: 24px
+        &:focus
+            border-color: $decor-main 
+    &__submit
+        padding: 25px 95px
+        background-color: $decor-main
+        border-radius: 10px
+        font-size: 16px
+        font-weight: 700
+        line-height: 18px
+        &:focus, &:active, &:hover
+            background-color: darken($decor-main, 3%) 
+
+.application-footer
+    &__item-1
+        font-size: 15px
+        text-align: center
+
+@media (max-width: 1199px)
+
+    .calculation-survey
+        &__title
+            max-width: 470px 
+        &__subtitle
+            margin-bottom: 75px
+
+@media (max-width: 991px)
+    .calculation
+
+        &__body
+        &__survey
+            max-width: none
+            flex-basis: 50%
+        &__application
+            max-width: none
+            flex-basis: 50%
+            padding: 0 20px
+
+    
+
+@media (max-width: 767px)
+    .calculation
+        &::before
+            display: none
+        &::after
+            display: none
+            
+        &__body
+            flex-wrap: wrap
+            padding: 0
+        &__survey
+            flex-basis: 100%
+            position: relative
+            padding: 50px 0 30px
+            &::before
+                content: ''
+                height: 100%
+                width: 100vw
+                position: absolute
+                top: 0
+                left: -20px
+                z-index: -1
+                background-color: $decor-main-darker
+            
+        &__application
+            flex-basis: 100%
+            position: relative
+            padding: 50px 0
+            &::before
+                content: ''
+                height: 100%
+                width: 100vw
+                position: absolute
+                top: 0
+                left: -20px
+                z-index: -1
+                background-image: url('../img/calculation/calculation_bg.jpg')
+                // background-image: url('../img/portfolio__slider/portfolio1.webp') 
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                
+
+    
