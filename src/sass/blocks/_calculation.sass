@@ -142,14 +142,15 @@
         &__subtitle
             margin-bottom: 75px
     .survey-question
-        animation: none
+        animation-name: zoomIn
     .application-form
         &__name
-            animation: none 
+            animation-name: zoomIn
         &__phone
-            animation: none 
+            animation-name: zoomIn 
         &__submit
-            animation: none 
+            animation-name: zoomIn
+
 @media (max-width: 991px)
     .calculation
 
@@ -311,35 +312,4 @@
     .application-form
         &__submit
             padding: 20px 40px
-
-
-.calculation
-    &::before
-    &::after
-    &__survey
-
-.calculation-survey
-    &__title
-    &__subtitle
-    &__questions
-
-.survey-questions 
-    &__item
-
-.survey-question 
-    &__number
-    &__text 
-
-.calculation-application
-    &__subtitle
-    &__form
-    &__footer
-
-.application-form
-    &__name
-    &__phone
-    &__submit
-
-.application-footer
-    &__item-1
 

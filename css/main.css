@@ -2054,20 +2054,20 @@
     margin-bottom: 75px;
   }
   .survey-question {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
   }
   .application-form__name {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
   }
   .application-form__phone {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
   }
   .application-form__submit {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
   }
 }
 
