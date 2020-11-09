@@ -277,8 +277,8 @@
         flex-basis: 45%;
   }
   .hero-details__item {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
   }
   .hero-details__item:not(:last-child) {
     margin-bottom: 20px;
