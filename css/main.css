@@ -739,8 +739,8 @@
             animation-name: zoomIn;
     -webkit-animation-duration: 0.7s;
             animation-duration: 0.7s;
-    -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 20px;
@@ -758,8 +758,8 @@
             animation-name: zoomIn;
     -webkit-animation-duration: 0.7s;
             animation-duration: 0.7s;
-    -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
   }
   .callback-footer {
     font-size: 15px;
@@ -1807,6 +1807,10 @@
         flex-basis: 46%;
     margin: 0 10px 30px;
   }
+  .material-item:nth-child(n) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
 }
 
 @media (max-width: 575px) {
@@ -2165,6 +2169,10 @@
         flex-basis: 48%;
     margin-right: 10px;
   }
+  .survey-question:nth-child(n) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
   .survey-question__number {
     margin-right: 20px;
   }
@@ -2186,16 +2194,22 @@
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
     margin-bottom: 20px;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
   }
   .application-form__phone {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
     margin-bottom: 20px;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
   }
   .application-form__submit {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
   }
 }
 
