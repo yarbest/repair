@@ -1862,8 +1862,8 @@
   right: 0;
   z-index: -1;
   background-image: url("../img/calculation/calculation_bg.jpg");
-  background-size: contain;
-  border: 1px solid #000;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .calculation__body {
@@ -1911,6 +1911,30 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.survey-question:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.survey-question:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.survey-question:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.survey-question:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .survey-question__number {
@@ -1967,6 +1991,12 @@
   border: 1px solid #dddddd;
   font-size: 15px;
   line-height: 24px;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .application-form__name:focus {
@@ -1980,6 +2010,12 @@
   border: 1px solid #dddddd;
   font-size: 15px;
   line-height: 24px;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .application-form__phone:focus {
@@ -1993,6 +2029,12 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .application-form__submit:focus, .application-form__submit:active, .application-form__submit:hover {
@@ -2011,19 +2053,51 @@
   .calculation-survey__subtitle {
     margin-bottom: 75px;
   }
+  .survey-question {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .application-form__name {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .application-form__phone {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .application-form__submit {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 @media (max-width: 991px) {
+  .calculation__body {
+    padding: 80px 0;
+  }
   .calculation__survey {
     max-width: none;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    padding-right: 20px;
   }
   .calculation__application {
     max-width: none;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    padding: 0 20px;
+    padding-left: 20px;
+  }
+  .calculation-survey__title {
+    margin-bottom: 35px;
+    text-align: center;
+    max-width: none;
+  }
+  .calculation-survey__subtitle {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .application-form__submit {
+    padding: 25px 75px;
   }
 }
 
@@ -2073,6 +2147,105 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+  }
+  .survey-questions {
+    max-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .survey-questions__item {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    margin-right: 10px;
+  }
+  .survey-question__number {
+    margin-right: 20px;
+  }
+  .survey-question__text {
+    font-size: 16px;
+  }
+  .application-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .application-form__name {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+  .application-form__phone {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+  .application-form__submit {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  .calculation__survey {
+    padding: 50px 0 30px;
+  }
+  .calculation-survey__title {
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  .survey-questions__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0px;
+  }
+  .survey-question__number {
+    margin-right: 20px;
+  }
+  .survey-question__text {
+    font-size: 16px;
+  }
+  .calculation-application__title {
+    font-size: 20px;
+  }
+  .application-form__name {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .application-form__phone {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .application-form__submit {
+    padding: 25px 65px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calculation-survey__title {
+    font-size: 18px;
+  }
+  .calculation-survey__subtitle {
+    font-size: 14px;
+  }
+  .survey-question__text {
+    font-size: 14px;
+  }
+  .calculation-application__title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .application-form__submit {
+    padding: 20px 40px;
   }
 }
 
