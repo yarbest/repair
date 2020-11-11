@@ -1367,8 +1367,8 @@
 .price__cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 31.6%, 31.6%, 31.6%;
-      grid-template-columns: 31.6%, 31.6%, 31.6%;
+  -ms-grid-columns: 31.6% 31.6% 31.6%;
+      grid-template-columns: 31.6% 31.6% 31.6%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
      -moz-box-pack: justify;
