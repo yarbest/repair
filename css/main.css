@@ -1718,8 +1718,8 @@
   background-color: #f7f7f7;
   border: 1px solid #e8e8e8;
   border-radius: 5%;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
   -webkit-animation-duration: 1.1s;
@@ -1742,10 +1742,8 @@
 }
 
 .material-item:hover {
-  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
 .material-item__text {
