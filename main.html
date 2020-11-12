@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/main.css" />
+
+        <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {
                 m[i] =
@@ -42,7 +44,13 @@
                             <a href="tel:+380952222222" class="header__phone">+7 (097) 13-231-31 </a>
                         </div>
                         <!-- header__contacts -->
-                        <button class="header__button button wow animate__animated">Перезвоните мне</button>
+                        <button
+                            id="button-callme"
+                            class="header__button button wow animate__animated"
+                            onclick="ym(69325384, 'reachGoal', 'button-callme'); return true;"
+                        >
+                            Перезвоните мне
+                        </button>
                     </div>
                     <!-- header__info -->
                 </div>

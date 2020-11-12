@@ -1,6 +1,7 @@
 const buttonCallMe = document.querySelector(".header__button");
 const modalWindow = document.querySelector(".modal");
 const buttonCloseModal = document.querySelector(".modal__close");
+console.log(modalWindow);
 
 const openModal = () => {
     modalWindow.classList.add("modal_active");
@@ -10,6 +11,8 @@ const openModal = () => {
 const closeModal = () => {
     modalWindow.classList.remove("modal_active");
 };
+buttonCallMe.addEventListener("click", openModal);
+buttonCloseModal.addEventListener("click", closeModal);
 
 //jquery
 $(document).ready(function () {
