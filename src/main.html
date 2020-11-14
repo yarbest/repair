@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Repair</title>
+        <link rel="icon" href="img/main-icon.png" />
+        <link rel="stylesheet" href="css/main.min.css" />
+
+        <!-- Yandex.Metrika counter -->
+        <!-- <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+            })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+            ym(69325384, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true });
+        </script>
+        <noscript
+            ><div><img src="https://mc.yandex.ru/watch/69325384" style="position: absolute; left: -9999px" alt="" /></div
+        ></noscript> -->
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body>
+        @@include('html_blocks/header.html')
+
+        <main class="main">
+            @@include('html_blocks/hero.html') @@include('html_blocks/callback.html') @@include('html_blocks/portfolio.html')
+            @@include('html_blocks/price.html') @@include('html_blocks/steps.html') @@include('html_blocks/materials.html')
+            @@include('html_blocks/calculation.html')
+        </main>
+        <!-- main -->
+        @@include('html_blocks/footer.html')
+
+        <div class="modal">
+            <div class="modal__dialog">
+                <button class="modal__close">&times;</button>
+                <h4 class="modal__title">Модальное окно</h4>
+            </div>
+            <!-- /.modal__dialog -->
+        </div>
+        <!-- /.modal -->
+        <button class="btn-scroll">
+            <svg class="btn-scroll__image">
+                <use xlink:href="img/icons.svg#arrow-up"></use>
+            </svg>
+        </button>
+        <!-- btn-scroll -->
+
+        <div id="cube-loader">
+            <div class="caption">
+                <div class="cube-loader">
+                    <div class="cube loader-1"></div>
+                    <div class="cube loader-2"></div>
+                    <div class="cube loader-4"></div>
+                    <div class="cube loader-3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script> -->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>
