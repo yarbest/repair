@@ -20,14 +20,14 @@ let path = {
         //возьмет все файлы из корня, с типом js
         js: source_folder + "/js/*.js",
         // все подпапки в imj /**/
-        img: source_folder + "/img/**/",
-        fonts: source_folder + "/fonts/**/",
+        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        fonts: source_folder + "/fonts/**/*.{ttf, eot, woff, woff2}",
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/css/**/*.css",
         js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/",
+        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     clean: "./" + project_folder + "/",
 };
@@ -39,7 +39,8 @@ let { src, dest } = require("gulp"),
     del = require("del"),
     group_media = require("gulp-group-css-media-queries"),
     clean_css = require("gulp-clean-css"),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    imagemin = require("gulp-imagemin");
 
 function browserSync(params) {
     browsersync.init({
@@ -69,19 +70,37 @@ function js() {
     return src(path.src.js).pipe(fileinclude()).pipe(dest(path.build.js)).pipe(browsersync.stream());
 }
 
+function images() {
+    return (
+        src(path.src.img)
+            // .pipe(
+            //     imagemin({
+            //         progressive: true,
+            //         svgoPlugins: [{ removeViewBox: false }],
+            //         interlaced: true,
+            //         optimizationLevel: 3, //0 - 7
+            //     })
+            // )
+            .pipe(dest(path.build.img))
+            .pipe(browsersync.stream())
+    );
+}
+
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.img], images);
 }
 
 function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync); //
 
+exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;

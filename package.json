@@ -2,7 +2,7 @@
     "name": "repair",
     "version": "1.0.0",
     "description": "",
-    "main": "main.html",
+    "main": "index.html",
     "dependencies": {},
     "devDependencies": {
         "browser-sync": "^2.26.13",
@@ -11,6 +11,7 @@
         "gulp-clean-css": "^4.3.0",
         "gulp-file-include": "^2.2.2",
         "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-imagemin": "^7.1.0",
         "gulp-rename": "^2.0.0"
     },
     "scripts": {
