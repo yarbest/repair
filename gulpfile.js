@@ -22,7 +22,7 @@ let path = {
         js: source_folder + "/js/*.js",
         // все подпапки в imj /**/
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        fonts: source_folder + "/fonts/**/*.{ttf, eot, woff, woff2}",
+        fonts: source_folder + "/fonts/**/*.{ttf,eot,woff,woff2}",
         icons: source_folder + "/icons/*.svg",
     },
     watch: {
@@ -30,7 +30,7 @@ let path = {
         css: source_folder + "/css/**/*.css",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        fonts: source_folder + "/fonts/**/*.{ttf, eot, woff, woff2}",
+        fonts: source_folder + "/fonts/**/*.{ttf,eot,woff,woff2}",
         icons: source_folder + "/icons/**/*.svg",
     },
     clean: "./" + project_folder + "/",
