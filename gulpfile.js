@@ -10,6 +10,7 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        icons: project_folder + "/img/icons/",
     },
     //пути к исходникам
     src: {
@@ -22,12 +23,14 @@ let path = {
         // все подпапки в imj /**/
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/**/*.{ttf, eot, woff, woff2}",
+        icons: source_folder + "/icons/*.svg",
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/css/**/*.css",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        icons: source_folder + "/icons/**/*.svg",
     },
     clean: "./" + project_folder + "/",
 };
@@ -40,7 +43,11 @@ let { src, dest } = require("gulp"),
     group_media = require("gulp-group-css-media-queries"),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
-    imagemin = require("gulp-imagemin");
+    imagemin = require("gulp-imagemin"),
+    webp = require("gulp-webp"),
+    webphtml = require("gulp-webp-html"),
+    webpcss = require("gulp-webpcss"),
+    svgSprite = require("gulp-svg-sprite");
 
 function browserSync(params) {
     browsersync.init({
@@ -53,37 +60,69 @@ function browserSync(params) {
 }
 
 function html() {
-    return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
-}
-
-function css() {
-    return src(path.src.css)
-        .pipe(group_media())
-        .pipe(dest(path.build.css))
-        .pipe(clean_css())
-        .pipe(rename({ extname: ".min.css" }))
-        .pipe(dest(path.build.css))
+    return src(path.src.html)
+        .pipe(fileinclude())
+        .pipe(webphtml())
+        .pipe(dest(path.build.html))
         .pipe(browsersync.stream());
 }
 
+function css() {
+    return (
+        src(path.src.css)
+            .pipe(group_media())
+            // данная настройка уберет загрузку jpg, оставит только webp в норм браузерах
+            .pipe(webpcss({ webpClass: ".webp", noWebpClass: ".no-webp" }))
+            .pipe(dest(path.build.css))
+            .pipe(clean_css())
+            .pipe(rename({ extname: ".min.css" }))
+            .pipe(dest(path.build.css))
+            .pipe(browsersync.stream())
+    );
+}
+
 function js() {
-    return src(path.src.js).pipe(fileinclude()).pipe(dest(path.build.js)).pipe(browsersync.stream());
+    return src(path.src.js)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.js))
+        .pipe(browsersync.stream());
 }
 
 function images() {
-    return (
-        src(path.src.img)
-            // .pipe(
-            //     imagemin({
-            //         progressive: true,
-            //         svgoPlugins: [{ removeViewBox: false }],
-            //         interlaced: true,
-            //         optimizationLevel: 3, //0 - 7
-            //     })
-            // )
-            .pipe(dest(path.build.img))
-            .pipe(browsersync.stream())
-    );
+    return src(path.src.img)
+        .pipe(
+            webp({
+                quality: 70,
+            })
+        )
+        .pipe(dest(path.build.img))
+        .pipe(src(path.src.img))
+        .pipe(
+            imagemin({
+                progressive: true,
+                svgoPlugins: [{ removeViewBox: false }],
+                interlaced: true,
+                optimizationLevel: 3, //0 - 7
+            })
+        )
+        .pipe(dest(path.build.img))
+        .pipe(browsersync.stream());
+}
+
+function icons() {
+    return gulp
+        .src([source_folder + "/icons/*.svg"])
+        .pipe(
+            svgSprite({
+                mode: {
+                    stack: {
+                        sprite: "../icons/icons.svg",
+                        example: true,
+                    },
+                },
+            })
+        )
+        .pipe(dest(path.build.img));
 }
 
 function watchFiles(params) {
@@ -91,15 +130,17 @@ function watchFiles(params) {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.icons], icons);
 }
 
 function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, icons));
 let watch = gulp.parallel(build, watchFiles, browserSync); //
 
+exports.icons = icons;
 exports.images = images;
 exports.js = js;
 exports.css = css;
