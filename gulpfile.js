@@ -48,7 +48,9 @@ let { src, dest } = require("gulp"),
     webp = require("gulp-webp"),
     webphtml = require("gulp-webp-html"),
     webpcss = require("gulp-webpcss"),
-    svgSprite = require("gulp-svg-sprite");
+    svgSprite = require("gulp-svg-sprite"),
+    ttf2woff = require("gulp-ttf2woff"),
+    ttf2woff2 = require("gulp-ttf2woff2");
 
 function browserSync(params) {
     browsersync.init({
@@ -127,7 +129,8 @@ function icons() {
 }
 
 function fonts() {
-    return src(path.src.fonts).pipe(dest(path.build.fonts));
+    src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
+    return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
 }
 
 function watchFiles(params) {
