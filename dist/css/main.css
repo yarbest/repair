@@ -2695,6 +2695,7 @@ body.compensate-for-scrollbar {
 
 .footer-icon {
   margin-right: 25px;
+  margin-top: 7px;
   width: 20px;
   height: 20px;
   fill: #ffd200;
@@ -3748,6 +3749,7 @@ body {
 
   .footer-icon {
     margin-right: 0;
+    margin-top: 0;
     margin-bottom: 10px;
     width: 40px;
     height: 40px;
